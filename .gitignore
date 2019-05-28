@@ -81,6 +81,7 @@ ui_*.h
 *.jsc
 Makefile*
 *build-*
+*.qmake.stash
 
 # Qt unit tests
 target_wrapper.*
@@ -97,6 +98,10 @@ CMakeLists.txt.user*
 
 # QtCreator 4.8< compilation database 
 compile_commands.json
+
+# IDE/Text Editor Settings
+.vscode
+.idea
 
 # QtCreator local machine specific files for imported projects
 *creator.user*
