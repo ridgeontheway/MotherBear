@@ -102,7 +102,7 @@
           <number>4</number>
          </property>
          <item>
-          <widget class="QPushButton" name="pushButton_3">
+          <widget class="QPushButton" name="NewProjectButton">
            <property name="text">
             <string>New Project</string>
            </property>
@@ -125,7 +125,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="LoadProjectButton">
            <property name="text">
             <string>Load Project</string>
            </property>
@@ -148,7 +148,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="SettingsButton">
            <property name="text">
             <string>Settings</string>
            </property>

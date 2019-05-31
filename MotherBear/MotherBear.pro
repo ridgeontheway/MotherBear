@@ -31,6 +31,7 @@ SOURCES += \
         mainwindow.cpp
 
 HEADERS += \
+        Controller/Abstracts/icontroller.h \
         Controller/Concretes/welcomescreencontroller.h \
         View/Concretes/welcomescreenview.h \
         mainwindow.h
