@@ -8,7 +8,9 @@ WelcomeScreenController::WelcomeScreenController()
 void WelcomeScreenController::processButtonPress(const char* message){
     allowedMessages validMessages;
     if (isValidRequest(message, &validMessages)){
-        //we have a valid request, now we need to see what request
+        processValidNewScreenRequest(message, &validMessages);
+        processValidEditScreenRequest(message, &validMessages);
+        processValidSettingsScreenRequest(message, &validMessages);
     }
     else{
 
@@ -27,18 +29,19 @@ void WelcomeScreenController::processValidNewScreenRequest(const char* message, 
     if (message != validMessagStruct->newProjectScreen){
         return;
     }
+    //fill this with the new poject screen
 
 }
 
 void WelcomeScreenController::processValidEditScreenRequest(const char *message, allowedMessages *validMessagStruct){
     if (message != validMessagStruct->editExistingProjectScreen){
-
+        return;
     }
 }
 
 void WelcomeScreenController::processValidSettingsScreenRequest(const char *message, allowedMessages *validMessagStruct){
     if (message != validMessagStruct->settingsScreen){
-
+        return;
     }
 }
 
