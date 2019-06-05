@@ -34,6 +34,7 @@ SOURCES += \
 HEADERS += \
         Controller/Abstracts/icontroller.h \
         Controller/Concretes/welcomescreencontroller.h \
+        Controller/Exceptions/invalidmessageexeption.h \
         View/Concretes/welcomescreenview.h \
         mainwindow.h \
         moc_predefs.h \
