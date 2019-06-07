@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "Controller/Abstracts/icontroller.h"
 
+
 namespace Ui {
 class MainWindow;
 }
@@ -16,7 +17,6 @@ class WelcomeScreenView : public QMainWindow
 public:
     explicit WelcomeScreenView(QWidget *parent = nullptr, iController *ref = nullptr);
     ~WelcomeScreenView();
-    void setController();
 private slots:
     void on_pushButton_3_clicked();
 
