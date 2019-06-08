@@ -1,4 +1,5 @@
 #include "welcomescreencontroller.h"
+#include "projecteditscreencontroller.h"
 #include "Controller/Exceptions/invalidmessageexeption.h"
 #include <iostream>
 
@@ -34,8 +35,9 @@ void WelcomeScreenController::processValidNewScreenRequest(const char* message, 
     if (message != validMessagStruct->newProjectScreen){
         return;
     }
-    //fill this with the new poject screen
 
+    view.hide();
+    ProjectEditScreenController controller(this);
 }
 
 void WelcomeScreenController::processValidEditScreenRequest(const char *message, allowedMessages *validMessagStruct){
