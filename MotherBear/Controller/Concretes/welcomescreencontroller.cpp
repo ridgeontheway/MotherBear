@@ -1,9 +1,4 @@
 #include "welcomescreencontroller.h"
-#include "projecteditscreencontroller.h"
-#include "Controller/Exceptions/invalidmessageexeption.h"
-#include <iostream>
-
-using namespace std;
 
 WelcomeScreenController::WelcomeScreenController()
 {
@@ -12,21 +7,20 @@ WelcomeScreenController::WelcomeScreenController()
 
 void WelcomeScreenController::processButtonPress(const char* message){
     allowedMessages validMessages;
-    try{
-        isValidRequest(message, &validMessages);
+    if (isValidRequest(message, &validMessages)){
+        processValidNewScreenRequest(message, &validMessages);
+        processValidEditScreenRequest(message, &validMessages);
+        processValidSettingsScreenRequest(message, &validMessages);
     }
-    catch (invalidMessageExeption& x){
-        cout << x.what() << endl;
+    else{
+
     }
-    processValidNewScreenRequest(message, &validMessages);
-    processValidEditScreenRequest(message, &validMessages);
-    processValidSettingsScreenRequest(message, &validMessages);
 }
 
 bool WelcomeScreenController::isValidRequest(const char *message, allowedMessages* validMessagStruct){
-    bool isValid = true;
-    if (message != validMessagStruct->newProjectScreen && message != validMessagStruct->editExistingProjectScreen && message != validMessagStruct->settingsScreen){
-        throw  invalidMessageExeption();
+    bool isValid = false;
+    if (message == validMessagStruct->newProjectScreen || message == validMessagStruct->editExistingProjectScreen || message == validMessagStruct->settingsScreen){
+        isValid = true;
     }
     return isValid;
 }
@@ -37,7 +31,6 @@ void WelcomeScreenController::processValidNewScreenRequest(const char* message, 
     }
 
     view.hide();
-    ProjectEditScreenController controller(this);
 }
 
 void WelcomeScreenController::processValidEditScreenRequest(const char *message, allowedMessages *validMessagStruct){

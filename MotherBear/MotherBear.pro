@@ -26,9 +26,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++17
 
 SOURCES += \
-        Controller/Concretes/projecteditscreencontroller.cpp \
         Controller/Concretes/welcomescreencontroller.cpp \
-        View/Concretes/projecteditscreenview.cpp \
         View/Concretes/welcomescreenview.cpp \
         main.cpp \
         mainwindow.cpp
@@ -37,8 +35,6 @@ HEADERS += \
         Controller/Abstracts/icontroller.h \
         Controller/Concretes/projecteditscreencontroller.h \
         Controller/Concretes/welcomescreencontroller.h \
-        Controller/Exceptions/invalidmessageexeption.h \
-        View/Concretes/projecteditscreenview.h \
         View/Concretes/welcomescreenview.h \
         mainwindow.h \
         moc_predefs.h \
