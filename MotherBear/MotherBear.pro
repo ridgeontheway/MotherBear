@@ -23,7 +23,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-CONFIG += c++17
+CONFIG += c++11
 
 SOURCES += \
         Controller/Concretes/welcomescreencontroller.cpp \
@@ -38,14 +38,10 @@ HEADERS += \
         View/Concretes/welcomescreenview.h \
         mainwindow.h \
         moc_predefs.h \
-        ui_WelcomeScreen.h \
-        ui_mainwindow.h \
-        ui_projecteditscreen.h
+        ui_WelcomeScreen.h
 
 FORMS += \
-    View/Ui/WelcomeScreen.ui \
-    View/Ui/mainwindow.ui \
-    View/Ui/projecteditscreen.ui
+    View/Ui/WelcomeScreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
