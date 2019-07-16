@@ -26,25 +26,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        Controller/Concretes/applicationcontroller.cpp \
-        Controller/Concretes/welcomescreencontroller.cpp \
-        View/Concretes/mainwindowscreenview.cpp \
-        View/Concretes/projecteditscreenview.cpp \
+        Controller/Concretes/mainwindowcontroller.cpp \
+        View/Concretes/mainwindowview.cpp \
         main.cpp
 
 HEADERS += \
         Controller/Abstracts/icontroller.h \
-    Controller/Concretes/applicationcontroller.h \
+        Controller/Concretes/mainwindowcontroller.h \
         Controller/Concretes/projecteditscreencontroller.h \
-        Controller/Concretes/welcomescreencontroller.h \
-    View/Concretes/mainwindowscreenview.h \
-        View/Concretes/projecteditscreenview.h \
+        View/Concretes/mainwindowview.h \
         moc_predefs.h \
-    ui_MainWindow.h \
-        ui_ProjectEditScreen.h \
+        ui_MainWindowScreen.h
 
 FORMS += \
-    View/Ui/MainWindow.ui
+    View/Ui/MainWindowScreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

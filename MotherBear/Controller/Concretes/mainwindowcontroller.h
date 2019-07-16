@@ -1,13 +1,12 @@
 #ifndef WELCOMESCREENCONTROLLER_H
 #define WELCOMESCREENCONTROLLER_H
 
-#include "View/Concretes/mainwindowscreenview.h"
-#include "applicationcontroller.h"
+#include "View/Concretes/mainwindowview.h"
 
-class WelcomeScreenController : iController
+class MainWindowScreenController : iController
 {
 public:
-    WelcomeScreenController(MainWindowScreenController *applicationControllerPtr = nullptr);
+    MainWindowScreenController();
     void processButtonPress(const char* message) override;
 private:
     struct allowedMessages{
@@ -21,7 +20,6 @@ private:
     void processValidEditScreenRequest(const char* message, allowedMessages *validMessagStruct);
     void processValidSettingsScreenRequest(const char* message, allowedMessages *validMessagStruct);
     MainWindowScreenView view;
-    MainWindowScreenController *_applicationController;
 };
 
 #endif // WELCOMESCREENCONTROLLER_H
