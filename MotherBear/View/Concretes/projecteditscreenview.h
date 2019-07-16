@@ -1,14 +1,16 @@
 #ifndef PROJECTEDITSCREENVIEW_H
 #define PROJECTEDITSCREENVIEW_H
 
-#include <QMainWindow>
+#include <QWidget>
+#include "ui_ProjectEditScreen.h"
 #include "Controller/Abstracts/icontroller.h"
 
+
 namespace Ui {
-class MainWindow;
+class ProjectEditScreen;
 }
 
-class ProjectEditScreenView : public QMainWindow
+class ProjectEditScreenView : public QWidget
 {
     Q_OBJECT
 
@@ -16,7 +18,7 @@ public:
     explicit ProjectEditScreenView(QWidget *parent = nullptr, iController *ref = nullptr);
     ~ProjectEditScreenView();
 private:
-    Ui::MainWindow *ui;
+    Ui::ProjectEditScreen *ui;
     iController *controllerRef;
 };
 

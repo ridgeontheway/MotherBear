@@ -1,8 +1,14 @@
 #include "welcomescreencontroller.h"
 
-WelcomeScreenController::WelcomeScreenController()
+WelcomeScreenController::WelcomeScreenController(MainWindowScreenController *applicationControllerPtr) :
+    view(new MainWindowScreenView(nullptr, this))
 {
+    if (applicationControllerPtr == nullptr){
+        //TODO: throw some error here
+    }
+    _applicationController = applicationControllerPtr;
     view.show();
+    view.editTemp(applicationControllerPtr);
 }
 
 void WelcomeScreenController::processButtonPress(const char* message){
