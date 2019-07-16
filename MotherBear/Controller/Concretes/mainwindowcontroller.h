@@ -3,10 +3,10 @@
 
 #include "View/Concretes/mainwindowview.h"
 
-class MainWindowScreenController : iController
+class MainWindowController : iController
 {
 public:
-    MainWindowScreenController();
+    MainWindowController();
     void processButtonPress(const char* message) override;
 private:
     struct allowedMessages{
@@ -19,7 +19,7 @@ private:
     void processValidNewScreenRequest(const char* message, allowedMessages *validMessagStruct);
     void processValidEditScreenRequest(const char* message, allowedMessages *validMessagStruct);
     void processValidSettingsScreenRequest(const char* message, allowedMessages *validMessagStruct);
-    MainWindowScreenView view;
+    MainWindowView view;
 };
 
 #endif // WELCOMESCREENCONTROLLER_H

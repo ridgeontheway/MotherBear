@@ -1,11 +1,11 @@
-#include "welcomescreencontroller.h"
+#include "mainwindowcontroller.h"
 
-WelcomeScreenController::WelcomeScreenController()
+MainWindowController::MainWindowController()
 {
     view.show();
 }
 
-void WelcomeScreenController::processButtonPress(const char* message){
+void MainWindowController::processButtonPress(const char* message){
     allowedMessages validMessages;
     if (isValidRequest(message, &validMessages)){
         processValidNewScreenRequest(message, &validMessages);
@@ -17,7 +17,7 @@ void WelcomeScreenController::processButtonPress(const char* message){
     }
 }
 
-bool WelcomeScreenController::isValidRequest(const char *message, allowedMessages* validMessagStruct){
+bool MainWindowController::isValidRequest(const char *message, allowedMessages* validMessagStruct){
     bool isValid = false;
     if (message == validMessagStruct->newProjectScreen || message == validMessagStruct->editExistingProjectScreen || message == validMessagStruct->settingsScreen){
         isValid = true;
@@ -25,7 +25,7 @@ bool WelcomeScreenController::isValidRequest(const char *message, allowedMessage
     return isValid;
 }
 
-void WelcomeScreenController::processValidNewScreenRequest(const char* message, allowedMessages* validMessagStruct){
+void MainWindowController::processValidNewScreenRequest(const char* message, allowedMessages* validMessagStruct){
     if (message != validMessagStruct->newProjectScreen){
         return;
     }
@@ -33,13 +33,13 @@ void WelcomeScreenController::processValidNewScreenRequest(const char* message, 
     view.hide();
 }
 
-void WelcomeScreenController::processValidEditScreenRequest(const char *message, allowedMessages *validMessagStruct){
+void MainWindowController::processValidEditScreenRequest(const char *message, allowedMessages *validMessagStruct){
     if (message != validMessagStruct->editExistingProjectScreen){
         return;
     }
 }
 
-void WelcomeScreenController::processValidSettingsScreenRequest(const char *message, allowedMessages *validMessagStruct){
+void MainWindowController::processValidSettingsScreenRequest(const char *message, allowedMessages *validMessagStruct){
     if (message != validMessagStruct->settingsScreen){
         return;
     }

@@ -11,13 +11,13 @@ class MainWindow;
 }
 
 
-class MainWindowScreenView : public QMainWindow
+class MainWindowView : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindowScreenView(QWidget *parent = nullptr, iController *ref = nullptr);
-    ~MainWindowScreenView();
+    explicit MainWindowView(QWidget *parent = nullptr, iController *ref = nullptr);
+    ~MainWindowView();
 private slots:
     void on_NewProjectButton_clicked();
 
