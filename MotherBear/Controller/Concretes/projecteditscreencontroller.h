@@ -2,7 +2,6 @@
 #define PROJECTEDITSCREENCONTROLLER_H
 
 #include "View/Concretes/projecteditscreenview.h"
-#include "Controller/Abstracts/icontroller.h"
 
 class ProjectEditScreenController : iController
 {

@@ -2,6 +2,7 @@
 #define PROJECTEDITSCREENVIEW_H
 
 #include <QMainWindow>
+#include "ui_projecteditscreen.h"
 #include "Controller/Abstracts/icontroller.h"
 
 namespace Ui {

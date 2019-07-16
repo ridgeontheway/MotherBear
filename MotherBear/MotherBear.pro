@@ -27,7 +27,9 @@ CONFIG += c++11
 
 SOURCES += \
         Controller/Concretes/mainwindowcontroller.cpp \
+        Controller/Concretes/projecteditscreencontroller.cpp \
         View/Concretes/mainwindowview.cpp \
+        View/Concretes/projecteditscreenview.cpp \
         main.cpp
 
 HEADERS += \
@@ -35,11 +37,14 @@ HEADERS += \
         Controller/Concretes/mainwindowcontroller.h \
         Controller/Concretes/projecteditscreencontroller.h \
         View/Concretes/mainwindowview.h \
+        View/Concretes/projecteditscreenview.h \
         moc_predefs.h \
-        ui_MainWindowScreen.h
+        ui_MainWindowScreen.h \
+        ui_projecteditscreen.h
 
 FORMS += \
-    View/Ui/MainWindowScreen.ui
+    View/Ui/MainWindowScreen.ui \
+    View/Ui/projecteditscreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
