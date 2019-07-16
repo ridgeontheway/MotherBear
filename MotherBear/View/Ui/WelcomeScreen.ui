@@ -73,21 +73,21 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="QPushButton" name="NewProjectButton">
+            <widget class="QPushButton" name="pushButton_3">
              <property name="text">
               <string>PushButton</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="LoadProjectButton">
+            <widget class="QPushButton" name="pushButton_2">
              <property name="text">
               <string>PushButton</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="SettingsButton">
+            <widget class="QPushButton" name="pushButton">
              <property name="text">
               <string>PushButton</string>
              </property>
@@ -102,6 +102,17 @@
     </widget>
    </widget>
   </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
