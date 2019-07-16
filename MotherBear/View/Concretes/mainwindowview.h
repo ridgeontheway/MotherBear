@@ -2,7 +2,7 @@
 #define WELCOMESCREENVIEW_H
 
 #include <QMainWindow>
-#include "ui_WelcomeScreen.h"
+#include "ui_MainWindowScreen.h"
 #include "Controller/Abstracts/icontroller.h"
 
 
@@ -11,13 +11,13 @@ class MainWindow;
 }
 
 
-class WelcomeScreenView : public QMainWindow
+class MainWindowScreenView : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit WelcomeScreenView(QWidget *parent = nullptr, iController *ref = nullptr);
-    ~WelcomeScreenView();
+    explicit MainWindowScreenView(QWidget *parent = nullptr, iController *ref = nullptr);
+    ~MainWindowScreenView();
 private slots:
     void on_NewProjectButton_clicked();
 

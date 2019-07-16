@@ -1,11 +1,10 @@
-#include "mainwindow.h"
-#include "Controller/Concretes/welcomescreencontroller.h"
+#include "Controller/Concretes/mainwindowcontroller.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    WelcomeScreenController tempController;
+    MainWindowScreenController tempController;
 
     return a.exec();
 }

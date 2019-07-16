@@ -1,6 +1,6 @@
-#include "welcomescreenview.h"
+#include "mainwindowview.h"
 
-WelcomeScreenView::WelcomeScreenView(QWidget *parent, iController *ref) :
+MainWindowScreenView::MainWindowScreenView(QWidget *parent, iController *ref) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     controllerRef(ref)
@@ -11,23 +11,23 @@ WelcomeScreenView::WelcomeScreenView(QWidget *parent, iController *ref) :
     }
 }
 
-WelcomeScreenView::~WelcomeScreenView()
+MainWindowScreenView::~MainWindowScreenView()
 {
     delete ui;
     delete controllerRef; //todo give this a look to see if this is needed
 }
 
-void WelcomeScreenView::on_NewProjectButton_clicked()
+void MainWindowScreenView::on_NewProjectButton_clicked()
 {
     controllerRef->processButtonPress("NEW_SCREEN");
 }
 
-void WelcomeScreenView::on_LoadProjectButton_clicked()
+void MainWindowScreenView::on_LoadProjectButton_clicked()
 {
 
 }
 
-void WelcomeScreenView::on_SettingsButton_clicked()
+void MainWindowScreenView::on_SettingsButton_clicked()
 {
 
 }
