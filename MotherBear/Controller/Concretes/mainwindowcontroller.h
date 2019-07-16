@@ -2,6 +2,7 @@
 #define WELCOMESCREENCONTROLLER_H
 
 #include "View/Concretes/mainwindowview.h"
+#include "projecteditscreencontroller.h"
 
 class MainWindowController : iController
 {

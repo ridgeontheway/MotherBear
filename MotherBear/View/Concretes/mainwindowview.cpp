@@ -17,17 +17,21 @@ MainWindowView::~MainWindowView()
     delete controllerRef; //todo give this a look to see if this is needed
 }
 
-void MainWindowView::on_NewProjectButton_clicked()
-{
-    controllerRef->processButtonPress("NEW_SCREEN");
-}
 
-void MainWindowView::on_LoadProjectButton_clicked()
+
+void MainWindowView::on_newProjectButton_clicked()
 {
 
 }
 
-void MainWindowView::on_SettingsButton_clicked()
+
+void MainWindowView::on_editProjectButton_clicked()
+{
+
+}
+
+
+void MainWindowView::on_settingsButton_clicked()
 {
 
 }

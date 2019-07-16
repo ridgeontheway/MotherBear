@@ -19,11 +19,11 @@ public:
     explicit MainWindowView(QWidget *parent = nullptr, iController *ref = nullptr);
     ~MainWindowView();
 private slots:
-    void on_NewProjectButton_clicked();
+    void on_editProjectButton_clicked();
 
-    void on_LoadProjectButton_clicked();
+    void on_newProjectButton_clicked();
 
-    void on_SettingsButton_clicked();
+    void on_settingsButton_clicked();
 
 private:
     Ui::MainWindow *ui;
