@@ -4,20 +4,23 @@
 #include <QMainWindow>
 #include "ui_projecteditscreen.h"
 #include "Controller/Abstracts/icontroller.h"
+#include "View/Abstracts/iscreenview.h"
 
 namespace Ui {
-class MainWindow;
+class ProjectEditWindow;
 }
 
-class ProjectEditScreenView : public QMainWindow
+class ProjectEditScreenView : public QMainWindow, public iScreenView
 {
     Q_OBJECT
 
 public:
     explicit ProjectEditScreenView(QWidget *parent = nullptr, iController *ref = nullptr);
-    ~ProjectEditScreenView();
+    ~ProjectEditScreenView() override;
+    int getQStackedWidgetPosition() override;
+    void setUpScreens(); //TODO passed in an array of abstract views
 private:
-    Ui::MainWindow *ui;
+    Ui::ProjectEditWindow *ui;
     iController *controllerRef;
 };
 

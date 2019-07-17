@@ -36,6 +36,7 @@ HEADERS += \
         Controller/Abstracts/icontroller.h \
         Controller/Concretes/mainwindowcontroller.h \
         Controller/Concretes/projecteditscreencontroller.h \
+        View/Abstracts/iscreenview.h \
         View/Concretes/mainwindowview.h \
         View/Concretes/projecteditscreenview.h \
         moc_predefs.h \

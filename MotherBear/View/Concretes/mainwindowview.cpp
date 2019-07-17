@@ -21,7 +21,7 @@ MainWindowView::~MainWindowView()
 
 void MainWindowView::on_newProjectButton_clicked()
 {
-
+    //send a message here
 }
 
 
@@ -34,4 +34,8 @@ void MainWindowView::on_editProjectButton_clicked()
 void MainWindowView::on_settingsButton_clicked()
 {
 
+}
+
+int MainWindowView::getQStackedWidgetPosition(){
+    return 1;
 }
