@@ -2,6 +2,10 @@
 
 BaseView::BaseView(QWidget *parent) : QMainWindow (parent){}
 
+BaseView::~BaseView(){
+    controllerRef = nullptr;
+}
+
 int BaseView::getQStackedWidgetPosition(){
     return qStackedWidgetPosition;
 }
