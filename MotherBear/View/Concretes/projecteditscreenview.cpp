@@ -1,9 +1,8 @@
 #include "projecteditscreenview.h"
 
-ProjectEditScreenView::ProjectEditScreenView(QWidget *parent, iController *ref) :
-    QMainWindow(parent),
-     ui(new Ui::ProjectEditWindow),
-     controllerRef(ref)
+ProjectEditScreenView::ProjectEditScreenView(QWidget *parent) :
+    BaseView(parent),
+     ui(new Ui::ProjectEditWindow)
 {
      ui->setupUi(this);
      if (controllerRef == nullptr){
@@ -16,6 +15,3 @@ ProjectEditScreenView::~ProjectEditScreenView(){
     delete controllerRef; //todo give this a look to see if this is needed
 }
 
-int ProjectEditScreenView::getQStackedWidgetPosition(){
-    return 1;
-}

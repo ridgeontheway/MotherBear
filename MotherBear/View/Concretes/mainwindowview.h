@@ -2,23 +2,25 @@
 #define WELCOMESCREENVIEW_H
 
 #include <QMainWindow>
+#include <QWidget>
 #include "ui_MainWindowScreen.h"
 #include "Controller/Abstracts/icontroller.h"
 #include "View/Abstracts/iscreenview.h"
+#include "View/Concretes/baseview.h"
 
 namespace Ui {
 class MainWindow;
 }
 
 
-class MainWindowView : public QMainWindow, public iScreenView
+class MainWindowView : public BaseView
 {
     Q_OBJECT
-
 public:
-    explicit MainWindowView(QWidget *parent = nullptr, iController *ref = nullptr);
+    explicit MainWindowView(QWidget *parent = nullptr);
     ~MainWindowView() override;
-    int getQStackedWidgetPosition() override;
+    void pushQStackedWidgetPosition(QWidget *newScreen);
+    void insertQStackedWidget(QWidget *newScreen, int pos);
 private slots:
     void on_editProjectButton_clicked();
 
@@ -28,8 +30,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    iController *controllerRef;
-    int qStackedWidgetPosition  = 1;
 };
 
 #endif // WELCOMESCREENVIEW_H

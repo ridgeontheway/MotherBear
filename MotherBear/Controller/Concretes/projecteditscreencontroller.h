@@ -3,7 +3,7 @@
 
 #include "View/Concretes/projecteditscreenview.h"
 
-class ProjectEditScreenController : iController
+class ProjectEditScreenController : public iController
 {
 public:
     ProjectEditScreenController();
