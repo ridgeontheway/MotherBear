@@ -3,6 +3,7 @@
 
 #include "View/Concretes/mainwindowview.h"
 #include "projecteditscreencontroller.h"
+#include "Model/viewsignalmodel.h"
 
 class MainWindowController : public iController
 {
@@ -10,17 +11,12 @@ public:
     MainWindowController();
     void processButtonPress(const char* message) override;
 private:
-    struct allowedMessages{
-        const char* newProjectScreen = "NEW_SCREEN";
-        const char* editExistingProjectScreen = "EDIT_SCREEN";
-        const char* settingsScreen = "SETTINGS_SCREEN";
-    };
-
-    bool isValidRequest(const char* message, allowedMessages *validMessagStruct);
-    void processValidNewScreenRequest(const char* message, allowedMessages *validMessagStruct);
-    void processValidEditScreenRequest(const char* message, allowedMessages *validMessagStruct);
-    void processValidSettingsScreenRequest(const char* message, allowedMessages *validMessagStruct);
+    bool isValidRequest(const char* message);
+    void processValidNewScreenRequest(const char* message);
+    void processValidEditScreenRequest(const char* message);
+    void processValidSettingsScreenRequest(const char* message);
     MainWindowView view;
+    ViewSignalModel signalModel;
 };
 
 #endif // WELCOMESCREENCONTROLLER_H

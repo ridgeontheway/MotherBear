@@ -29,6 +29,7 @@ SOURCES += \
         Controller/Concretes/mainwindowcontroller.cpp \
         Controller/Concretes/projecteditscreencontroller.cpp \
         Model/switchablescreensmodel.cpp \
+        Model/viewsignalmodel.cpp \
         View/Concretes/baseview.cpp \
         View/Concretes/mainwindowview.cpp \
         View/Concretes/projecteditscreenview.cpp \
@@ -38,6 +39,7 @@ HEADERS += \
         Controller/Concretes/mainwindowcontroller.h \
         Controller/Concretes/projecteditscreencontroller.h \
         Model/switchablescreensmodel.h \
+        Model/viewsignalmodel.h \
         View/Abstracts/iscreenview.h \
         View/Concretes/baseview.h \
         View/Concretes/mainwindowview.h \

@@ -12,9 +12,10 @@ class BaseView : public QMainWindow, public iScreenView
 public:
     explicit BaseView(QWidget *parent = nullptr);
     ~BaseView() override;
+    void setQStackedWidgetPosition(int) override;
     int getQStackedWidgetPosition() override;
     void setExternalController(iController *controller) override;
-    void setQStackedWidgetPosition(int position) override;
+    iController* getExternalController();
 private:
     iController *controllerRef;
     int qStackedWidgetPosition;

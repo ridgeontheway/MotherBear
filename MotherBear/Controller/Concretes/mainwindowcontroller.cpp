@@ -1,46 +1,48 @@
 #include "mainwindowcontroller.h"
-
+#include <iostream>
 MainWindowController::MainWindowController()
 {
+    view.setSignalModel(&signalModel);
+    view.setExternalController(this);
     view.show();
 }
 
 void MainWindowController::processButtonPress(const char* message){
-    allowedMessages validMessages;
-    if (isValidRequest(message, &validMessages)){
-        processValidNewScreenRequest(message, &validMessages);
-        processValidEditScreenRequest(message, &validMessages);
-        processValidSettingsScreenRequest(message, &validMessages);
+    if (isValidRequest(message)){
+        processValidNewScreenRequest(message);
+        processValidEditScreenRequest(message);
+        processValidSettingsScreenRequest(message);
     }
     else{
 
     }
 }
 
-bool MainWindowController::isValidRequest(const char *message, allowedMessages* validMessagStruct){
+bool MainWindowController::isValidRequest(const char *message){
     bool isValid = false;
-    if (message == validMessagStruct->newProjectScreen || message == validMessagStruct->editExistingProjectScreen || message == validMessagStruct->settingsScreen){
+    if (message == signalModel.getSettingsScreenMessage() || message == signalModel.getNewProjectScreenMessage() || message == signalModel.getEditExistingProjectScreenMessage()){
         isValid = true;
     }
     return isValid;
 }
 
-void MainWindowController::processValidNewScreenRequest(const char* message, allowedMessages* validMessagStruct){
-    if (message != validMessagStruct->newProjectScreen){
+void MainWindowController::processValidNewScreenRequest(const char* message){
+    if (message != signalModel.getNewProjectScreenMessage()){
         return;
     }
+    std::cout << "NEW SCREEN RECIEVED?" << std::endl;
 
-    view.hide();
 }
 
-void MainWindowController::processValidEditScreenRequest(const char *message, allowedMessages *validMessagStruct){
-    if (message != validMessagStruct->editExistingProjectScreen){
+void MainWindowController::processValidEditScreenRequest(const char *message){
+    if (message != signalModel.getEditExistingProjectScreenMessage()){
         return;
+
     }
 }
 
-void MainWindowController::processValidSettingsScreenRequest(const char *message, allowedMessages *validMessagStruct){
-    if (message != validMessagStruct->settingsScreen){
+void MainWindowController::processValidSettingsScreenRequest(const char *message){
+    if (message != signalModel.getSettingsScreenMessage()){
         return;
     }
 }

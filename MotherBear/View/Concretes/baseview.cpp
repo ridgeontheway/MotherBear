@@ -6,6 +6,10 @@ BaseView::~BaseView(){
     controllerRef = nullptr;
 }
 
+void BaseView::setQStackedWidgetPosition(int pos){
+    qStackedWidgetPosition = pos;
+}
+
 int BaseView::getQStackedWidgetPosition(){
     return qStackedWidgetPosition;
 }
@@ -14,6 +18,6 @@ void BaseView::setExternalController(iController *controller){
     controllerRef = controller;
 }
 
-void BaseView::setQStackedWidgetPosition(int position){
-    qStackedWidgetPosition = position;
+iController* BaseView::getExternalController(){
+    return controllerRef;
 }
