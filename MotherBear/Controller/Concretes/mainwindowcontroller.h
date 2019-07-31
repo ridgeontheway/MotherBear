@@ -5,7 +5,7 @@
 #include "projecteditscreencontroller.h"
 #include "Model/viewsignalmodel.h"
 
-class MainWindowController : public iController
+class MainWindowController : public iScreenController
 {
 public:
     MainWindowController();

@@ -3,11 +3,11 @@
 
 #include "View/Concretes/projecteditscreenview.h"
 
-class ProjectEditScreenController : public iController
+class ProjectEditScreenController : public iScreenController
 {
 public:
     ProjectEditScreenController();
-    ProjectEditScreenController(iController *parent);
+    ProjectEditScreenController(iScreenController *parent);
     void processButtonPress(const char* message) override;
 private:
     ProjectEditScreenView view;

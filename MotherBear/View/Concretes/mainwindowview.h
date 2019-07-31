@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QWidget>
 #include "ui_MainWindowScreen.h"
-#include "Controller/Abstracts/icontroller.h"
+#include "Controller/Abstracts/iscreencontroller.h"
 #include "View/Abstracts/iscreenview.h"
 #include "View/Concretes/baseview.h"
 #include "Model/viewsignalmodel.h"
@@ -33,7 +33,7 @@ private slots:
 private:
     Ui::MainWindow* ui;
     ViewSignalModel* signalModel;
-    iController *controllerRef;
+    iScreenController *controllerRef;
     int qStackedWidgetPosition;
 };
 

@@ -4,7 +4,7 @@ ProjectEditScreenController::ProjectEditScreenController(){
 
 }
 
-ProjectEditScreenController::ProjectEditScreenController(iController *parent){
+ProjectEditScreenController::ProjectEditScreenController(iScreenController *parent){
 
 }
 

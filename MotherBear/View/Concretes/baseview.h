@@ -14,10 +14,10 @@ public:
     ~BaseView() override;
     void setQStackedWidgetPosition(int) override;
     int getQStackedWidgetPosition() override;
-    void setExternalController(iController *controller) override;
-    iController* getExternalController();
+    void setExternalController(iScreenController *controller) override;
+    iScreenController* getExternalController();
 private:
-    iController *controllerRef;
+    iScreenController *controllerRef;
     int qStackedWidgetPosition;
 };
 

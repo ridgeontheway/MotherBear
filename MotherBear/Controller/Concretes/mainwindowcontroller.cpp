@@ -30,6 +30,7 @@ void MainWindowController::processValidNewScreenRequest(const char* message){
     if (message != signalModel.getNewProjectScreenMessage()){
         return;
     }
+    //TODO: here we need to switch the screens
     std::cout << "NEW SCREEN RECIEVED?" << std::endl;
 
 }
@@ -37,7 +38,6 @@ void MainWindowController::processValidNewScreenRequest(const char* message){
 void MainWindowController::processValidEditScreenRequest(const char *message){
     if (message != signalModel.getEditExistingProjectScreenMessage()){
         return;
-
     }
 }
 

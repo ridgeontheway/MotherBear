@@ -14,10 +14,10 @@ int BaseView::getQStackedWidgetPosition(){
     return qStackedWidgetPosition;
 }
 
-void BaseView::setExternalController(iController *controller){
+void BaseView::setExternalController(iScreenController *controller){
     controllerRef = controller;
 }
 
-iController* BaseView::getExternalController(){
+iScreenController* BaseView::getExternalController(){
     return controllerRef;
 }

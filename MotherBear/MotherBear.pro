@@ -26,19 +26,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        Controller/Concretes/configparsercontroller.cpp \
         Controller/Concretes/mainwindowcontroller.cpp \
         Controller/Concretes/projecteditscreencontroller.cpp \
+        Controller/Concretes/viewroutercontroller.cpp \
         Model/switchablescreensmodel.cpp \
+        Model/validscreenmodel.cpp \
         Model/viewsignalmodel.cpp \
         View/Concretes/baseview.cpp \
         View/Concretes/mainwindowview.cpp \
         View/Concretes/projecteditscreenview.cpp \
         main.cpp
 HEADERS += \
-        Controller/Abstracts/icontroller.h \
+        Controller/Abstracts/iscreencontroller.h \
+        Controller/Concretes/configparsercontroller.h \
         Controller/Concretes/mainwindowcontroller.h \
         Controller/Concretes/projecteditscreencontroller.h \
+        Controller/Concretes/viewroutercontroller.h \
         Model/switchablescreensmodel.h \
+        Model/validscreenmodel.h \
         Model/viewsignalmodel.h \
         View/Abstracts/iscreenview.h \
         View/Concretes/baseview.h \

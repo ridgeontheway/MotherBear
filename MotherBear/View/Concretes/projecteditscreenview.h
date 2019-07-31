@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "ui_projecteditscreen.h"
 #include "View/Concretes/baseview.h"
-#include "Controller/Abstracts/icontroller.h"
+#include "Controller/Abstracts/iscreencontroller.h"
 #include "View/Abstracts/iscreenview.h"
 
 namespace Ui {
@@ -19,7 +19,7 @@ public:
     ~ProjectEditScreenView() override;
 private:
     Ui::ProjectEditWindow *ui;
-    iController *controllerRef;
+    iScreenController *controllerRef;
     int qStackedWidgetPosition;
 };
 

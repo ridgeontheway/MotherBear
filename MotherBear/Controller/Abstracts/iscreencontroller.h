@@ -1,11 +1,11 @@
 #ifndef ICONTROLLER_H
 #define ICONTROLLER_H
 
-class iController
+class iScreenController
 {
 public:
-    inline iController(){}
-    virtual ~iController(){}
+    inline iScreenController(){}
+    virtual ~iScreenController(){}
     virtual void processButtonPress(const char* message) = 0;
 private:
 };
