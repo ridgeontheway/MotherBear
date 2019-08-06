@@ -38,4 +38,4 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 
 ## Acknowledgments
 
-* The [Block-based programming language](Blocky/) code was taken from the [Google Blocky Project](https://developers.google.com/blockly/) 
+* The [Block-based programming language](MotherBear/Blockly) code was taken from the [Google Blockly Project](https://developers.google.com/blockly/) 
