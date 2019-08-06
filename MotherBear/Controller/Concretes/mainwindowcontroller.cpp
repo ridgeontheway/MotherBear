@@ -1,10 +1,27 @@
 #include "mainwindowcontroller.h"
 #include <iostream>
-MainWindowController::MainWindowController()
+MainWindowController::MainWindowController() :
+    viewRouterController("Settings/screen_info.csv")
 {
-    view.setSignalModel(&signalModel);
     view.setExternalController(this);
+    initializeView();
     view.show();
+}
+
+void MainWindowController::initializeView(){
+    SwitchableScreensModel* modelPtr = viewRouterController.getModel();
+    std::vector<std::string> screenNames = modelPtr->getScreenNames();
+
+    for (int i = 0; i < screenNames.size(); i++){
+        std::string currName = screenNames[i];
+        if (currName == "EditProject"){
+            //TOOD add the edit project screen to the view
+        }
+        else if (currName == "Settings"){
+            //TODO add the settings screen to the view
+        }
+    }
+
 }
 
 void MainWindowController::processButtonPress(const char* message){
@@ -20,31 +37,23 @@ void MainWindowController::processButtonPress(const char* message){
 
 bool MainWindowController::isValidRequest(const char *message){
     bool isValid = false;
-    if (message == signalModel.getSettingsScreenMessage() || message == signalModel.getNewProjectScreenMessage() || message == signalModel.getEditExistingProjectScreenMessage()){
-        isValid = true;
-    }
+
     return isValid;
 }
 
 void MainWindowController::processValidNewScreenRequest(const char* message){
-    if (message != signalModel.getNewProjectScreenMessage()){
-        return;
-    }
+
     //TODO: here we need to switch the screens
     std::cout << "NEW SCREEN RECIEVED?" << std::endl;
 
 }
 
 void MainWindowController::processValidEditScreenRequest(const char *message){
-    if (message != signalModel.getEditExistingProjectScreenMessage()){
-        return;
-    }
+
 }
 
 void MainWindowController::processValidSettingsScreenRequest(const char *message){
-    if (message != signalModel.getSettingsScreenMessage()){
-        return;
-    }
+
 }
 
 

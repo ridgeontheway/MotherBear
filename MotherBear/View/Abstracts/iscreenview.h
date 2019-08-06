@@ -1,7 +1,6 @@
 #ifndef ISCREENVIEW_H
 #define ISCREENVIEW_H
 
-#include <QMainWindow>
 #include "Controller/Abstracts/iscreencontroller.h"
 
 class iScreenView

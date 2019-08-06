@@ -1,4 +1,3 @@
-Screen Name, Widget Position:
-MainWindow, 1
-EditProject, 2
-Settings, 3
+Screen Name, Message, Widget Position:
+EditProject,Edit Project, 1
+Settings,Settings Screen, 2

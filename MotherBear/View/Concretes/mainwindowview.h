@@ -7,7 +7,6 @@
 #include "Controller/Abstracts/iscreencontroller.h"
 #include "View/Abstracts/iscreenview.h"
 #include "View/Concretes/baseview.h"
-#include "Model/viewsignalmodel.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,7 +19,6 @@ class MainWindowView : public BaseView
 public:
     explicit MainWindowView(QWidget *parent = nullptr);
     ~MainWindowView() override;
-    void setSignalModel(ViewSignalModel* model);
     void pushQStackedWidgetPosition(BaseView *newScreen);
     void insertQStackedWidget(BaseView *newScreen, int pos);
 private slots:
@@ -32,7 +30,6 @@ private slots:
 
 private:
     Ui::MainWindow* ui;
-    ViewSignalModel* signalModel;
     iScreenController *controllerRef;
     int qStackedWidgetPosition;
 };
